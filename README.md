@@ -17,6 +17,7 @@ Positive → 1
 Negative → 0
 
 Split the dataset into: 
+
 Training set
 Validation set
 Test set
@@ -27,6 +28,7 @@ Tokenized cleaned reviews using Keras Tokenizer and constructed a vocabulary of 
 Converted reviews into integer sequences and analyzed sequence-length distribution to determine an optimal input size.
 Applied sequence padding to a fixed length of 200 tokens so all reviews could be processed uniformly by recurrent neural networks.
 Used an Embedding layer to transform each token into a 128-dimensional dense vector representation, enabling the models to learn semantic relationships between words.
+
 Implemented and compared four recurrent neural network architectures:
 
 Simple RNN – baseline model to observe vanishing gradient limitations
@@ -40,19 +42,22 @@ Gated Recurrent Unit GRU – a lightweight and computationally efficient alterna
 Applied Dropout regularization (0.5) to reduce overfitting and improve generalization.
 
 Conducted hyperparameter experiments by varying:
-Number of recurrent layers (1, 2, and 3)
-Hidden units (64, 128, and 256)
-Dropout rates (0.3, 0.5, and 0.7)
+
+> Number of recurrent layers (1, 2, and 3)
+> Hidden units (64, 128, and 256)
+> Dropout rates (0.3, 0.5, and 0.7)
 
 Trained all models using:
-Adam Optimization Algorithm Adam optimizer
-Binary Cross-Entropy Loss
-Batch size of 64
-Up to 10 epochs
+
+> Adam Optimization Algorithm Adam optimizer
+> Binary Cross-Entropy Loss
+> Batch size of 64
+> Up to 10 epochs
 
 Used EarlyStopping to monitor validation loss and automatically restore the best-performing model weights.
 
 Evaluated each architecture using:
+
 1> Test accuracy
 2> Test loss
 3> Training time
@@ -60,6 +65,7 @@ Evaluated each architecture using:
 5> Training and validation learning curves
 
 Model Performance Comparison
+
 1>Simple RNN
 Accuracy: 51.47%
 Training Time: 11.05 minutes
